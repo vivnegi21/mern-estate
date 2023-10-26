@@ -15,7 +15,7 @@ export const signup = async (req,res,next)=>{
         await newUser.save();     //takes time
         res.status(201).json("User Created Success");
     } catch (error) {
-        next(error);
+        next(error+"Error-VIvel");
         // next(errorHandler(550,"Error from a function"));
     }
 };
