@@ -51,7 +51,7 @@ const SignUp = () => {
       <form action="" className='flex flex-col gap-4' onSubmit={onSubmit}>
         <input type="text" placeholder='Username' className='border p-3 rounded-lg' id='username' onChange={handleChange} />
         <input type="text" placeholder='Email' className='border p-3 rounded-lg' id='email' onChange={handleChange} />
-        <input type="text" placeholder='Password' className='border p-3 rounded-lg' id='password' onChange={handleChange} />
+        <input type="password" placeholder='Password' className='border p-3 rounded-lg' id='password' onChange={handleChange} />
         <button  disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' >
           {loading?'Loading...':"SignUp"}
         </button>
@@ -59,7 +59,7 @@ const SignUp = () => {
       </form>
       <div className='flex gap-2 mt-5'>
         <p>Have An Account?</p>
-        <Link className='text-blue-700 '>Sign in</Link>
+        <Link className='text-blue-700 ' to={'/sign-in'}>Sign in</Link>
       </div>
       {error && <p className='text-red-500 mt-5'>{error}</p> }
     </div>
