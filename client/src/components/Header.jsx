@@ -29,7 +29,7 @@ const Header = () => {
             {currentUser.currentUser ? (
               <img
                 className='rounded-full h-7 w-7 object-cover'
-                src={currentUser.currentUser.photo}
+                src={currentUser?.currentUser?.photo}
                 alt='profile'
               />
             ) : (
