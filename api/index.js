@@ -4,11 +4,12 @@ import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
 import { test } from "./controllers/user.controller.js";
 import authRouter from './routes/auth.route.js'
+import cookieParser from "cookie-parser";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
-
+app.use(cookieParser());
 //connect to DB
 mongoose.connect("mongodb://127.0.0.1:27017/mern-estate").then(
     () => console.log("Connected to DB")).catch((err) => {
